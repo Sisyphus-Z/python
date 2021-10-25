@@ -1,0 +1,55 @@
+django-admin startproject xxx
+python manage.py startapp xxx
+
+INSTALLED_APPS = [
+... ...,
+'xxx'
+]
+
+pip install pymysql
+
+create database xxx default charset utf8
+
+DATABASES = {
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xxx',
+        # 数据库名 称,需要自己定义
+        'USER': 'xxx',
+        'PASSWORD': 'xxx',        
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+    }
+}
+
+
+总目录的 __init__.py 添加：
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+from django.conf.urls import url ,include
+urlpatterns = [
+    .......,
+    url('',include('xxxapp.urls')),
+    url('xxx/',include('xxxapp.urls')),
+]
+
+新建urls.py
+from django.conf.urls import url,include
+from .views import *
+urlpatterns = [
+    url(r'^index$',index_views),
+    url(r'^map$',map_views)
+
+]
+
+views.py
+return render(request,'index.html')
+return HttpResponse('<html><body>Hello my Django</body></html>')
+
+如果已有数据表，但是没有写入到models.py中，可以运行：python manage.py inspectdb > app名/models.py将现有数据表在models中建模
+这样就可以使用django model相关有方法对表进行读取了

@@ -1,0 +1,11 @@
+from 当前目录的一个包(包中有__init__.py).某个py文件 import *
+
+from 当前目录的某个py文件 import *
+
+import sys
+sys.path.append('..')
+from 上级目录的某个py文件 import *
+
+import sys
+sys.path.append('..')
+from 隔壁目录的一个包(包中有__init__.py).某个py文件 import *
