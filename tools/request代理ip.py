@@ -68,7 +68,7 @@ for i in range(0,len(list1)):
         "https": "http://"+list1[i],
     }
 
-    print("http://"+list1[i],end=" ")
+    print(list1[i],end=" ")
 
     try:
         r1 = requests.get(url=url1,
