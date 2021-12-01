@@ -57,7 +57,7 @@ if os.path.exists('proxies.txt')==False:
 
 
 
-with open('proxies111.txt', 'r', encoding="utf-8") as f2:
+with open('proxies.txt', 'r') as f2:
     list1=f2.readlines()
 for i in range(0,len(list1)):
     list1[i]=list1[i].replace("\n","")
