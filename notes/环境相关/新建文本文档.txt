@@ -1,0 +1,8 @@
+pip install pipreqs
+pipreqs ./
+pip install -r requirements.txt
+(-r, --requirement <file>    Install from the given requirements file. This option can be used multiple times.)
+
+卸载所有依赖
+pip freeze>modules.txt
+pip uninstall -r modules.txt -y
