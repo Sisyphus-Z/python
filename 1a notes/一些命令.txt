@@ -1,0 +1,7 @@
+改pip镜像源
+pip config list
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+查看安装的包
+pip list
+pip show <package-name>
