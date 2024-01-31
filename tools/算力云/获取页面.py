@@ -4,10 +4,10 @@ import time
 from selenium import webdriver
 
 import 公共
-import 用户输入
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
 
 driver = webdriver.Edge()
 # 最大化浏览器窗口
@@ -18,10 +18,12 @@ def run():
 
     driver.get(公共.url)
 
+    # 使用 WebDriverWait 来等待特定元素的出现
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div[2]/div[3]/div/div[2]/div[1]/form/div[2]/div/div/input"))  # 替换为实际元素的 XPath
+    )
 
 
-
-    time.sleep(2)
 
     # # Step 4: 在新的浏览器窗口中加载cookies
     # with open('cookies.json', 'r') as f:

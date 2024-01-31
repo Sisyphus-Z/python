@@ -1,12 +1,12 @@
 import tkinter as tk
 
+global 输入
 def run():
-    输入 = ""
 
     def on_button_click(event=None):
         user_input = entry.get()
-        nonlocal 输入
-        输入 = user_input
+        global 输入
+        输入= user_input
         print("你输入的是：", user_input)
         window.destroy()  # 关闭主窗口
 
@@ -28,6 +28,3 @@ def run():
     # 启动主循环
     window.lift()  # 提升窗口至顶层
     window.mainloop()
-
-    return 输入
-
