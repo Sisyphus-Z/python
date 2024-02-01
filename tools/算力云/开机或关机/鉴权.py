@@ -6,13 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-import 公共
+from 公共 import 公共
 
 # 初始化一个浏览器对象
 driver = webdriver.Edge()
 
 # Step 1: 登录网站获取鉴权信息
-driver.get(公共.url)
+driver.get(公共.控制台url)
 # 在这里执行登录操作，填写用户名和密码等
 
 # Step 2: 输入用户名和密码
@@ -50,7 +50,7 @@ while True:
 
 # 保存 token 到 JSON 文件
 token_data = {'token': token}
-with open('token.json', 'w') as f:
+with open('../公共/token.json', 'w') as f:
     json.dump(token_data, f)
 
 

@@ -5,13 +5,12 @@ import time
 import pyperclip
 
 import 隧道
-import 公共
 import 用户输入
 
 用户输入.run()
-import 获取页面
+from 公共 import 获取页面, 公共
 
-获取页面.run()
+获取页面.run(公共.控制台url)
 driver = 获取页面.driver
 
 
@@ -37,7 +36,7 @@ if 用户输入.输入 != "":
         复制账号与密码="/html/body/div[1]/div[4]/div[2]/div[2]/div[2]/div/div[1]/div/div/div[3]/table/tbody/tr[{}]/td[8]/div/div/div/div[{}]/span[2]"
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.XPATH,
-                                            复制账号与密码.format(用户输入.输入,2)))
+                                            复制账号与密码.format(用户输入.输入, 2)))
             # 替换为实际元素的 XPath
         ).click()
         time.sleep(0.5)
@@ -47,7 +46,7 @@ if 用户输入.输入 != "":
 
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH,
-                                            复制账号与密码.format(用户输入.输入,4)))
+                                            复制账号与密码.format(用户输入.输入, 4)))
             # 替换为实际元素的 XPath
         ).click()
         time.sleep(0.5)

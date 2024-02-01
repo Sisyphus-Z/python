@@ -1,9 +1,8 @@
 import subprocess
 import time
 import pyautogui
-import pygetwindow as gw
 
-import 公共
+from 公共 import 公共
 
 # 将你想激活的程序的窗口标题传递给函数
 window_title = "AutoDl"

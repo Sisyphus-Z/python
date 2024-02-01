@@ -1,4 +1,5 @@
 import json
+import os
 import time
 
 from selenium import webdriver
@@ -14,9 +15,12 @@ driver = webdriver.Edge()
 driver.maximize_window()
 
 
-def run():
+def run(url):
 
-    driver.get(公共.url)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+
+    driver.get(url)
 
     # 使用 WebDriverWait 来等待特定元素的出现
     WebDriverWait(driver, 10).until(
@@ -31,8 +35,9 @@ def run():
     #     for cookie in loaded_cookies:
     #         driver.add_cookie(cookie)
 
+
     # 从文件中读取 token
-    with open('token.json', 'r') as f:
+    with open(current_dir+'/token.json', 'r') as f:
         token_data = json.load(f)
         token = token_data.get('token', '')
 
@@ -41,7 +46,7 @@ def run():
     driver.execute_script(f"window.localStorage.setItem('token', '{token}');")
 
     time.sleep(2)
-    driver.get(公共.url)
+    driver.get(url)
 
     # driver.refresh()
 

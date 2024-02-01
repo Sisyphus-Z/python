@@ -1,6 +1,11 @@
-import 公共
-import 隧道
+import keyboard
 
-公共.username="ssh -p 38747 root@region-41.seetacloud.com"
-公共.password="udFydScw2uk7"
-隧道.关闭()
+def on_key_event(e):
+    if e.name == 'j':
+        print("你按下了 'j' 键！")
+
+# 注册回调函数来处理键盘事件
+keyboard.hook(on_key_event)
+
+# 保持程序运行
+keyboard.wait('esc')  # 等待按下 "esc" 键，你可以根据需要修改
