@@ -12,6 +12,10 @@ global password
 
 
 def xpath_find(driver, xpath):
-    return WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, xpath))  # 替换为实际元素的 XPath
-    )
+    try:
+        result = WebDriverWait(driver, 5, 0.5).until(EC.presence_of_element_located((By.XPATH, xpath)))
+    except :
+        print("报错的xpath"+xpath)
+
+
+    return result
