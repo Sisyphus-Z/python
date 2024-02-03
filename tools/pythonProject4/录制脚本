@@ -1,0 +1,2 @@
+E:\anaconda3\envs\py310\Scripts\playwright.exe codegen https://www.autodl.com/create --save-storage=auth.json --viewport-size=1900,1000
+E:\anaconda3\envs\py310\Scripts\playwright.exe codegen https://www.autodl.com/create --load-storage=auth.json --viewport-size=1900,1000
