@@ -39,7 +39,7 @@ def run(playwright: Playwright) -> None:
             global 是否放入queue
             是否放入queue = False
 
-            if ("开机" in 开关机 or True):
+            if ("开机" in 开关机):
                 print("1111")
 
                 page.get_by_role("cell", name="登录指令 ssh").locator("span").nth(1).click()
