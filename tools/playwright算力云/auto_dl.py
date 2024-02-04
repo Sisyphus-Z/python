@@ -33,7 +33,7 @@ def activate_window(window_title):
 
 
 
-def 打开():
+def open():
     exe_path = r'D:\AutoDL-SSH-Tools\AutoDL.exe'
 
     subprocess.Popen(exe_path)
@@ -67,7 +67,7 @@ def 打开():
     pyautogui.press('space')
     time.sleep(2)
 
-def 关闭():
+def close():
     time.sleep(1)
 
     activate_window(window_title)
