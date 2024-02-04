@@ -53,8 +53,6 @@ def run(playwright: Playwright) -> None:
                 隧道.open()
 
             elif ("关机" in 开关机):
-                page.get_by_role("button", name="").dblclick()
-
                 print("2222")
                 隧道.close()
 

@@ -21,6 +21,7 @@ def activate_window(window_title):
             for item in windows:
                 print(item.title)
                 if item.title=="AutoDL":
+                    print("关闭"+item.title)
                     window=item
                     window.activate()
 
@@ -71,9 +72,9 @@ def open():
     time.sleep(2)
 
 def close():
-    time.sleep(1)
+    # time.sleep(1)
 
     activate_window(window_title)
 
-    time.sleep(1)
-    pyautogui.hotkey('alt', 'f4')
+    # time.sleep(1)
+    # pyautogui.hotkey('alt', 'f4')
