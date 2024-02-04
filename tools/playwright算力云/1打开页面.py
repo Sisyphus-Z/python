@@ -21,7 +21,7 @@ def run(playwright: Playwright) -> None:
 
 
 
-    my_queue = Queue()
+    my_queue = Queue(maxsize=1)
 
     def temp1(e):
         if e.event_type == keyboard.KEY_DOWN and (e.name == 'j' or e.name=="k"):
