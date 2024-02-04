@@ -80,7 +80,7 @@ def 关闭():
             time.sleep(1)
 
             # 模拟按下Alt+F4组合键，关闭窗口
-            pyautogui.hotkey('alt', 'f4')
+            # pyautogui.hotkey('alt', 'f4')
             return True
         else:
             print(f"找不到标题为'{window_title}'的窗口。")

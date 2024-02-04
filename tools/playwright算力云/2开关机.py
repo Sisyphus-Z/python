@@ -48,15 +48,13 @@ def run(playwright: Playwright) -> None:
                 page.get_by_role("cell", name="登录指令 ssh").locator("span").nth(3).click()
                 公共.密码 = pyperclip.paste()
 
-
                 隧道.打开()
 
-            elif ("关机" in 开关机 or True):
+            elif ("关机" in 开关机):
                 print("2222")
                 隧道.关闭()
 
             是否放入queue = True
-
 
         page.wait_for_timeout(1000)
 
