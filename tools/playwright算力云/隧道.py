@@ -53,7 +53,7 @@ def 打开():
 
     # 使用 pyautogui.typewrite 输入密码
     pyautogui.typewrite(公共.密码)
-    time.sleep(1)
+    time.sleep(0.5)
 
     pyautogui.press('tab')
     time.sleep(0.2)
@@ -66,6 +66,7 @@ def 打开():
     time.sleep(2)
 
 def 关闭():
+    time.sleep(1)
     try:
         # 获取所有窗口的标题
         windows = pyautogui.getWindowsWithTitle(window_title)

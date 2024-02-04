@@ -40,6 +40,7 @@ def run(playwright: Playwright) -> None:
             是否放入queue = False
 
             if ("开机" in 开关机 or True):
+                print("1111")
 
                 page.get_by_role("cell", name="登录指令 ssh").locator("span").nth(1).click()
                 公共.账号 = pyperclip.paste()
@@ -51,6 +52,7 @@ def run(playwright: Playwright) -> None:
                 隧道.打开()
 
             elif ("关机" in 开关机 or True):
+                print("2222")
                 隧道.关闭()
 
             是否放入queue = True
