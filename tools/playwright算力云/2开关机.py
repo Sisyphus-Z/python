@@ -6,7 +6,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 from queue import Queue
 
 import 公共
-import auto_dl
+import 隧道
 
 
 def run(playwright: Playwright) -> None:
@@ -18,6 +18,8 @@ def run(playwright: Playwright) -> None:
     page = context.new_page()
 
     page.goto("https://www.autodl.com/console/instance/list")
+
+    # page.pause()
 
     while True:
         temp = queue.get()
@@ -48,11 +50,13 @@ def run(playwright: Playwright) -> None:
                 page.get_by_role("cell", name="登录指令 ssh").locator("span").nth(3).click()
                 公共.密码 = pyperclip.paste()
 
-                auto_dl.open()
+                隧道.open()
 
             elif ("关机" in 开关机):
+                page.get_by_role("button", name="").dblclick()
+
                 print("2222")
-                auto_dl.close()
+                隧道.close()
 
             是否放入queue = True
 

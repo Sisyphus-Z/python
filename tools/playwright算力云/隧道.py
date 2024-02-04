@@ -18,9 +18,12 @@ def activate_window(window_title):
 
         # 如果有匹配的窗口，激活它
         if windows:
-            print(windows)
-            window = windows[0]
-            window.activate()
+            for item in windows:
+                print(item.title)
+                if item.title=="AutoDL":
+                    window=item
+                    window.activate()
+
             return True
         else:
             print(f"找不到标题为'{window_title}'的窗口。")
@@ -34,7 +37,7 @@ def activate_window(window_title):
 
 
 def open():
-    exe_path = r'D:\AutoDL-SSH-Tools\AutoDL.exe'
+    exe_path = 公共.auto_dl_path
 
     subprocess.Popen(exe_path)
 
