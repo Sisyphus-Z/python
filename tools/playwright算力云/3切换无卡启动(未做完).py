@@ -41,7 +41,7 @@ def run(playwright: Playwright) -> None:
                     "//html/body/div[1]/div[4]/div[2]/div[2]/div[2]/div/div[1]/div/div/div[3]/table/tbody/tr[{}]/td[10]/div/div/div/button".format(
                         temp))
 
-                
+
 
 
             elif "开机" in 开关机:
